@@ -19,7 +19,7 @@
 {syntab:Main}
 {synopt:{opth m:axwidth(#)}}The maximum allowable column width, in characters, for each {it:var} in {it:varlist}. When {cmd:maxwidth} is not specified, a default value of 50 is used.{p_end}
 
-{synopt:{opth u:serows(#)}}To achieve faster execution, {cmd:recol} only examines the first 100 rows and uses the content of those rows to infer the appropriate width of the column. The {cmd:userows} option will cause the program to examine the first {cmd:#} rows instead.{p_end}
+{synopt:{opth u:serows(#)}}To achieve faster execution, {cmd:recol} only examines the first 100 rows and uses the content of those rows to infer the appropriate width of the column. The {cmd:userows} option will indicate how many rows to use instead.{p_end}
 
 {synopt:{opt f:ull}}To achieve faster execution, {cmd:recol} only examines the first 100 rows and uses the content of those rows to infer the appropriate width of the column. The {cmd:full} option will cause the program to examine all rows to infer the appropriate width of the column. This may be useful if there are many missing values at the beginning of the data, but the program will slow down with larger datasets. If {cmd:full} and {cmd:userows} are both specified, {cmd:full} will be used.{p_end}
 {synoptline}
@@ -28,7 +28,7 @@
 {title:Description}
 
 {pstd}
-{cmd:recol} examines your variable names and the content of your variables in order to determine the appropriate display widths for your columns in the data browser. It works with string, numeric, and date variables.
+{cmd:recol} examines your variable names and the content of your variables in order to determine the appropriate display widths for your columns in the data browser. It works with both string and numeric variables.
 
 {pstd}
 For example, suppose you have a rather long variable name ({it:your_long_variable_name}) which gets truncated by Stata when displaying your data in the Browser ({it:your_long_v~e}). Rather than manually clicking and dragging to resize the column every time, {cmd:recol} will widen your columns automatically to display the full variable names.
