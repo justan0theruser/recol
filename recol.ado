@@ -50,7 +50,7 @@ program recol
 		}
 
 		// if date
-		else if regexm("`fmt'", "^%t") {
+		else if regexm("`fmt'", "^%[td]") {
 			tempvar datestr dstrlen
 			if "`full'" == "" {
 				// make the string version of the date - short version
@@ -64,7 +64,7 @@ program recol
 			local contents = `dstrlen'[1]
 		}
 
-		// numeric
+		// other numeric
 		else {
 			// make sure the format matches expectations
 			// strings and dates have already been handled, so this should work
