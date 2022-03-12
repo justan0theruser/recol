@@ -5,7 +5,7 @@ program recol
 	version 10.0
 
 	// syntax
-	syntax [varlist][, Maxwidth(integer 50) Userows(integer 100) Full]
+	syntax [varlist][, Maxwidth(integer 50) Userows(integer 100) Full Compress]
 
 	// list the variables
 	if "`varlist'" == "" {
@@ -108,5 +108,11 @@ program recol
 		as result "`new_width'" ///
 		as text _col(18) ": " ///
 		as result "`v'"
+
+		// optional compress
+		if "`compress'" != "" {
+			di as result "Compressing data"
+			compress
+		}
 	}
 end
