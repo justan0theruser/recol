@@ -5,6 +5,28 @@ This package dynamically **RE**sizes **COL**umns in Stata's data browser.
 
 
 
+## Installation and updates
+
+To install:
+
+```stata
+ssc install recol
+```
+
+To update:
+
+```stata
+ado update recol, update
+```
+
+To uninstall:
+
+```stata
+ssc uninstall recol
+```
+
+
+
 ## Syntax
 
 **recol** [*varlist*] [, *options*]
@@ -14,7 +36,7 @@ This package dynamically **RE**sizes **COL**umns in Stata's data browser.
 ## Options
 
 - **maxwidth**(#)
-	- The maximum allowable column width, in characters, for each {it:var} in *varlist*. When **maxwidth** is not specified, a default value of 50 is used.
+	- The maximum allowable column width, in characters, for each *var* in *varlist*. When **maxwidth** is not specified, a default value of 50 is used.
 
 - **userows**(#)
 	- To achieve faster execution, **recol** only examines the first 100 rows and uses the content of those rows to infer the appropriate width of the column. The **userows** option will indicate how many rows to use instead.
