@@ -28,6 +28,8 @@ of the column.
 This may be useful if there are many missing values at the beginning of the data, but the program will slow down with larger datasets.
 If {cmd:full} and {cmd:userows} are both specified, {cmd:full} is used and {cmd:userows} is ignored.
 
+{p2coldent:{opt c:ompress}}Some users frequently pair the {cmd:compress} command with {cmd:recol}. Use this option to compress the data at the end.
+
 {synoptline}
 
 
@@ -60,6 +62,9 @@ This can result in jumpy horizontal scrolling from columns that are too wide.
 
 {pstd}Dynamically resize a single column, using the full set of observations to determine width{p_end}
 {phang}{cmd:. recol var1, full}{p_end}
+
+{pstd}Dynamically resize all columns and then compress the data{p_end}
+{phang}{cmd:. recol, c}{p_end}
 {hline}
 
 
